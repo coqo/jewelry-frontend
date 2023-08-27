@@ -5,11 +5,12 @@ import Dashboard from '@/views/dashboard/WelcomePage.vue'
 
 //import MoldDesign from '@/views/production/order-plan/mold-design/MoldView.vue'
 //import PickingList from '@/views/production/order-plan/picking-list/PickingListView.vue'
+//test commit
 
 //import ImportProductionFile from '@/views/import-production/import/NewImportFile.vue'
 
 const routes = [
-  //----- Main Dashboard -----
+  //----- Main Dashboard ----
   {
     path: '/',
     component: Layout,
