@@ -6,7 +6,7 @@ import Dashboard from '@/views/dashboard/WelcomePage.vue'
 //import MoldDesign from '@/views/production/order-plan/mold-design/MoldView.vue'
 //import PickingList from '@/views/production/order-plan/picking-list/PickingListView.vue'
 
-import ImportProductionFile from '@/views/import-production/import/NewImportFile.vue'
+//import ImportProductionFile from '@/views/import-production/import/NewImportFile.vue'
 
 const routes = [
   //----- Main Dashboard -----
@@ -41,47 +41,47 @@ const routes = [
   },
 
   //----- Import Product -----
-  {
-    path: '/import-product',
-    component: Layout,
-    redirect: '/import-product-excel',
-    name: 'import-product',
-    meta: {
-      Displayname: {
-        en: 'Import Product',
-        th: 'นำเข้าใบผลิตสินค้า'
-      },
-      classIcon: 'bi bi-file-earmark-excel',
-      majorShow: true
-      //btLineShow: true
-    },
-    children: [
-      {
-        path: '/import-product-excel',
-        name: 'import-product-excel',
-        component: ImportProductionFile,
-        meta: {
-          Displayname: {
-            en: 'import Excel',
-            th: 'นำเข้าใบงานผลิต'
-          },
-          minorShow: true
-        }
-      },
-      {
-        path: '/import-product-track',
-        name: 'import-product-track',
-        component: Dashboard,
-        meta: {
-          Displayname: {
-            en: 'import Track',
-            th: 'ติดตามใบงานผลิต'
-          },
-          minorShow: true
-        }
-      }
-    ]
-  },
+  // {
+  //   path: '/import-product',
+  //   component: Layout,
+  //   redirect: '/import-product-excel',
+  //   name: 'import-product',
+  //   meta: {
+  //     Displayname: {
+  //       en: 'Import Product',
+  //       th: 'นำเข้าใบผลิตสินค้า'
+  //     },
+  //     classIcon: 'bi bi-file-earmark-excel',
+  //     majorShow: true
+  //     //btLineShow: true
+  //   },
+  //   children: [
+  //     {
+  //       path: '/import-product-excel',
+  //       name: 'import-product-excel',
+  //       component: ImportProductionFile,
+  //       meta: {
+  //         Displayname: {
+  //           en: 'import Excel',
+  //           th: 'นำเข้าใบงานผลิต'
+  //         },
+  //         minorShow: true
+  //       }
+  //     },
+  //     {
+  //       path: '/import-product-track',
+  //       name: 'import-product-track',
+  //       component: Dashboard,
+  //       meta: {
+  //         Displayname: {
+  //           en: 'import Track',
+  //           th: 'ติดตามใบงานผลิต'
+  //         },
+  //         minorShow: true
+  //       }
+  //     }
+  //   ]
+  // },
   //----- Mold && Picking List -----
   {
     path: '/production',
@@ -91,13 +91,25 @@ const routes = [
     meta: {
       Displayname: {
         en: 'Production Plan',
-        th: 'สร้างใบผลิตสินค้า'
+        th: 'ผลิตสินค้า'
       },
       classIcon: 'bi bi-vector-pen',
       majorShow: true,
       btsubLineShow: true
     },
     children: [
+      {
+        path: '/picking-list',
+        name: 'picking-list',
+        component: Dashboard,
+        meta: {
+          Displayname: {
+            en: 'Picking List',
+            th: 'สร้างใบผลิตสินค้า'
+          },
+          minorShow: true
+        }
+      },
       {
         path: '/mold',
         name: 'mold',
@@ -106,18 +118,6 @@ const routes = [
           Displayname: {
             en: 'Mold',
             th: 'เเม่พิมพ์ [ออกแบบ/ผลิต]'
-          },
-          minorShow: true
-        }
-      },
-      {
-        path: '/picking-list',
-        name: 'picking-list',
-        component: Dashboard,
-        meta: {
-          Displayname: {
-            en: 'Picking List',
-            th: 'เบิกวัตถุดิบ/ค่าเเรง'
           },
           minorShow: true
         }

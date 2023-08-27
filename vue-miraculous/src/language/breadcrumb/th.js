@@ -6,7 +6,7 @@ export default {
 
   //production
   mold: 'เเม่พิมพ์ [ออกแบบ/ผลิต]',
-  pickingList: 'เบิกวัตถุดิบ/ค่าเเรง',
+  pickingList: 'สร้างใบผลิต',
   productionTag: 'ติดตามการผลิต',
   productionReport: 'รายงานการผลิต',
 
