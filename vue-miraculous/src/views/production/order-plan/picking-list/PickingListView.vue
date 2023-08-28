@@ -8,6 +8,7 @@
           <button type="button" class="btn btn-primary center">upload image</button>
         </div>
         <div class="col-lg-10">
+          <div class="row">
           <div class="col-sm-6">
             <div class="form-group>">
               <label>แม่พิมพ์ : </label>
@@ -19,6 +20,10 @@
             </div>
             <div class="form-group>">
               <label>ลำดับ W.O. : </label>
+              <input type="text" class="form-control" id="num_wo">
+            </div>
+            <div class="form-group>">
+              <label>รหัสสินค้า : </label>
               <input type="text" class="form-control" id="num_wo">
             </div>
           </div>
@@ -35,13 +40,42 @@
               <label>รหัสลูกค้า : </label>
               <input type="text" class="form-control" id="num_wo">
             </div>
-          </div>
-          <div class="col-sm-12">
             <div class="form-group>">
               <label>Remark : </label>
               <input type="text" class="form-control" id="num_wo">
             </div>
           </div>
+          <div class="col-sm-2">
+            <div class="form-group>">
+              <label>หน่วย : </label>
+              <input type="text" class="form-control" id="num_wo">
+            </div>
+          </div>
+          <div class="col-sm-2">
+            <div class="form-group>">
+              <label>ยอดคลัง : </label>
+              <input type="text" class="form-control" id="num_wo">
+            </div>
+          </div>
+          <div class="col-sm-2">
+            <div class="form-group>">
+              <label>สำเร็จรูป : </label>
+              <input type="text" class="form-control" id="num_wo">
+            </div>
+          </div>
+          <div class="col-sm-2">
+            <div class="form-group>">
+              <label>กึ่งสำเร็จรูป : </label>
+              <input type="text" class="form-control" id="num_wo">
+            </div>
+          </div>
+          <div class="col-sm-2">
+            <div class="form-group>">
+              <label>ต้องหล่อ : </label>
+              <input type="text" class="form-control" id="num_wo">
+            </div>
+          </div>
+        </div>
         </div>
       </div>
     </form>
