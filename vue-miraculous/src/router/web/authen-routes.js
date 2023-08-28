@@ -2,6 +2,7 @@ import settingRoutes from './setting-routes.js'
 
 import Layout from '@/layout/web/LayoutDashboard.vue'
 import Dashboard from '@/views/dashboard/WelcomePage.vue'
+import PickingList from '@/views/production/order-plan/picking-list/PickingListView.vue'
 
 //import MoldDesign from '@/views/production/order-plan/mold-design/MoldView.vue'
 //import PickingList from '@/views/production/order-plan/picking-list/PickingListView.vue'
@@ -102,7 +103,7 @@ const routes = [
       {
         path: '/picking-list',
         name: 'picking-list',
-        component: Dashboard,
+        component: PickingList,
         meta: {
           Displayname: {
             en: 'Picking List',
