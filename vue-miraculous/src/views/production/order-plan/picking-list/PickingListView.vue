@@ -1,5 +1,7 @@
 <template>
-  <div></div>
+  <div class="container">
+    <h2>ชื่อฟอร์ม</h2>
+  </div>
 </template>
 
 <script>
