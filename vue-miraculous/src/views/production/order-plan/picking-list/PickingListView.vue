@@ -86,12 +86,8 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td>John</td>
-                    <td>Doe</td>
-                  </tr>
-                  <tr>
-                    <td>Mary</td>
-                    <td>Moe</td>
+                    <td><input type="text" class="form-control" id="num_wo"></td>
+                    <td><input type="text" class="form-control" id="num_wo"></td>
                   </tr>
                 </tbody>
               </table>
