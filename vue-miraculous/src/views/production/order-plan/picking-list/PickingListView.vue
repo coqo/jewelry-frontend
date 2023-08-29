@@ -4,7 +4,7 @@
     <form>
       <div class="row">
         <div class="col-lg-2">
-          <img src="@/assets/ring.jpg" class="img-responsive avatar" height="212">
+          <img src="@/assets/ring.jpg" class="img-responsive">
           <input type="file" class="form-control" id="num_wo">
         </div>
         <div class="col-lg-10">
@@ -109,7 +109,8 @@ export default {}
 </script>
 
 <style lang="scss" scoped>
-.center {
-  position: center;
+.img-responsive {
+  max-width: 100%;
+  height: auto;
 }
 </style>
