@@ -90,8 +90,88 @@
           </div>
         </div>
         <div class="data-container">
-          <h6>3. {{ $t('view.pickinglist.dataTitle') }}</h6>
-          <div class="data-input-container"></div>
+          <h6>3. {{ $t('view.pickinglist.quantityProduct') }} <i class="bi bi-cart4"></i></h6>
+          <div class="data-input-container">
+            <div class="data-input-quantity-container">
+              <div class="input-container">
+                <div>
+                  <label>{{ $t('view.pickinglist.title.pc') }}</label>
+                  <input type="text" class="form-control" v-model="form.pc" required />
+                </div>
+                <div>
+                  <label>{{ $t('view.pickinglist.title.quantity') }}</label>
+                  <input
+                    type="number"
+                    min="1"
+                    class="form-control"
+                    v-model="form.quantity"
+                    required
+                  />
+                </div>
+                <div>
+                  <label>{{ $t('view.pickinglist.title.semireadyMade') }}</label>
+                  <input
+                    type="number"
+                    min="1"
+                    class="form-control"
+                    v-model="form.semireadyMade"
+                    required
+                  />
+                </div>
+                <div>
+                  <label>{{ $t('view.pickinglist.title.semireadyMade') }}</label>
+                  <input
+                    type="number"
+                    min="1"
+                    class="form-control"
+                    v-model="form.semireadyMade"
+                    required
+                  />
+                </div>
+                <div>
+                  <label>{{ $t('view.pickinglist.title.cast') }}</label>
+                  <input type="number" min="1" class="form-control" v-model="form.cast" required />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="data-container">
+          <div class="title">
+            <h6>4. {{ $t('view.pickinglist.component') }} <i class="bi bi-gem"></i></h6>
+            <button class="btn btn-sm btn-primary btn-add-components">
+              <i class="bi bi-plus"></i>
+            </button>
+          </div>
+          <div class="data-input-container">
+            <div class="data-input-components-container">
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th>*</th>
+                    <th>ขนาด</th>
+                    <th>จำนวน</th>
+                    <th>*</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr v-for="data in form.components" :key="data.id">
+                    <td>{{ data.name }}</td>
+                    <td>{{ data.size }}</td>
+                    <td>{{ data.qty }}</td>
+                    <td>
+                      <button class="btn btn-sm btn-danger">
+                        <i class="bi bi-trash-fill"></i>
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="btn-container">
+          <button class="btn btn-sm btn-success float-right">สร้างใบจ่าย/รับคืนงาน</button>
         </div>
       </form>
     </div>
@@ -114,7 +194,23 @@ export default {
         mold: null,
         productNumber: null,
         customerNumber: null,
-        remark: null
+        remark: null,
+        pc: null,
+        quantity: null,
+        components: [
+          {
+            id: 1,
+            name: 'WG1-5',
+            size: '18K',
+            qty: 20
+          },
+          {
+            id: 1,
+            name: 'YG1-15',
+            size: '19K',
+            qty: 20
+          }
+        ]
       }
     }
   },
@@ -154,8 +250,11 @@ export default {
   //padding: 20px;
   //height: 100px;
   h6 {
-    padding: 10px 0px 10px 0px;
+    padding: 5px 0px 5px 0px;
     color: var(--base-font-color);
+  }
+  input {
+    font-size: 13px;
   }
 
   .upload-container {
@@ -231,12 +330,21 @@ export default {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     background-color: #f7f7f7;
     //padding: 20px;
-    padding: 20px;
+    padding: 10px;
     margin-bottom: 20px;
+    .title {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 5px;
+      .btn-add-components {
+        height: 30px;
+        width: 60px;
+      }
+    }
 
     .data-input-container {
       .input-container {
-        padding: 5px 70px 0px 70px;
+        padding: 5px 20px 0px 20px;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr; /* แบ่งหน้าจอออกเป็นสองส่วนเท่าๆ กัน */
         gap: 50px; /* ระยะห่างระหว่างส่วน */
@@ -248,7 +356,7 @@ export default {
     }
     .data-input-remark-container {
       .input-container {
-        padding: 5px 70px 0px 70px;
+        padding: 5px 20px 0px 20px;
         display: grid;
         //grid-template-columns: 1fr; /* แบ่งหน้าจอออกเป็นสองส่วนเท่าๆ กัน */
         //gap: 50px; /* ระยะห่างระหว่างส่วน */
@@ -257,10 +365,21 @@ export default {
           min-width: 128px;
           border: 0.1px solid var(--base-color);
           overflow: auto;
-          height: 80px;
+          height: 40px;
         }
       }
     }
+    .data-input-quantity-container {
+      .input-container {
+        padding: 5px 20px 0px 20px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr; /* แบ่งหน้าจอออกเป็นสองส่วนเท่าๆ กัน */
+        gap: 10px; /* ระยะห่างระหว่างส่วน */
+      }
+    }
+  }
+  .btn-container{
+    padding-bottom: 70px;
   }
 }
 </style>
