@@ -14,7 +14,7 @@
           :class="{ 'hidden-avatar': !isShowSidenav }"
         />
         <div class="employee-container" :class="{ 'hidden-avatar': !isShowSidenav }">
-          <label class="employee-name">USERNAME, USERCODE</label>
+          <label class="employee-name">JEWELRY MANAGEMENT</label>
         </div>
       </div>
 
@@ -83,7 +83,7 @@ export default {
 
   transition-duration: 0.5s;
   z-index: 1;
-  border-right: 2px solid var(--base-font-color); /* เพิ่มเส้นขอบด้านขวา */
+  border-right: 1px solid var(--base-font-color); /* เพิ่มเส้นขอบด้านขวา */
 }
 .sidebar-wrapper {
   //border-top: 1px solid var(--base-color);
@@ -136,7 +136,7 @@ export default {
   z-index: 97;
   top: 0;
   right: 0;
-  border-bottom: 2px solid var(--base-font-color); /* เพิ่มเส้นขอบด้านขวา */
+  border-bottom: 1px solid var(--base-font-color); /* เพิ่มเส้นขอบด้านขวา */
 
   .breadcrumb-wrapper {
     display: flex;
@@ -191,7 +191,7 @@ export default {
 // Custom Style
 .bottom-logo-line {
   // เพิ่ม border ด้านล่าง
-  border-bottom: 5px solid var(--base-font-color);
+  border-bottom: 3px solid var(--base-font-color);
   margin-left: 5px;
   margin-right: 5px;
   margin-bottom: 5px;
@@ -215,7 +215,7 @@ export default {
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    border: 5px solid var(--base-font-color);
+    border: 1px solid var(--base-font-color);
     border-style: ridge;
     opacity: 1; /* เริ่มต้นเป็นรูปแสดงออกมา */
     transition:

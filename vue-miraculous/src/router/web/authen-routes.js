@@ -4,6 +4,9 @@ import Layout from '@/layout/web/LayoutDashboard.vue'
 import Dashboard from '@/views/dashboard/WelcomePage.vue'
 import PickingList from '@/views/production/order-plan/picking-list/PickingListView.vue'
 
+// ----- test ----- //
+import TestAPI from '@/views/test-api/ViewTest.vue'
+
 //import MoldDesign from '@/views/production/order-plan/mold-design/MoldView.vue'
 //import PickingList from '@/views/production/order-plan/picking-list/PickingListView.vue'
 //test commit
@@ -172,7 +175,7 @@ const routes = [
       {
         path: '/logout',
         name: 'logout',
-        component: Dashboard,
+        component: TestAPI,
         meta: {
           Displayname: {
             en: 'Logout',

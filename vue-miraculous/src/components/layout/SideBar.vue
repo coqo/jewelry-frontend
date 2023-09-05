@@ -78,8 +78,9 @@
               <div v-if="!subMenu.children" class="sub-menu-wrapper">
                 <router-link :to="{ name: subMenu.name }" v-slot="{ href, navigate }">
                   <button class="btn-link btn-sub-menu" :href="href" @click="navigate">
-                    <span>
-                      {{ showMenuName(subMenu) }}
+                    <span class="">
+                      <i class="bi bi-arrow-return-right"></i>
+                       {{ showMenuName(subMenu) }}
                     </span>
                   </button>
                 </router-link>
@@ -119,7 +120,7 @@
     </div>
 
     <!-- Footer -->
-    <div class="main-footer"><label>version 1.0.0 (beta)</label></div>
+    <!-- <div class="main-footer"><label>version 1.0.0 (beta)</label></div> -->
     <!-- end : main menu -->
   </div>
 </template>
@@ -319,14 +320,14 @@ button {
 .router-link-active {
   > .btn-link {
     //background: linear-gradient(90deg, base-color 8px, base-color 0);
-    border-radius: 15px;
+    //border-radius: 15px;
 
     // border-bottom-left-radius: 15px;
     // border-bottom-right-radius: 15px;
 
     //font-size: 20px;
     color: var(--base-color);
-    font-weight: 400;
+    //font-weight: 400;
     transition-duration: 0.5s;
     background-color: var(--base-font-color);
     border-bottom: solid 3px var(--base-color);
