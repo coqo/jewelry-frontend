@@ -60,7 +60,7 @@
           <div class="data-input-remark-container">
             <div class="input-container">
               <label>{{ $t('view.pickinglist.title.remark') }}</label>
-              <textarea class="box-text-area" v-model="remark"></textarea>
+              <textarea class="box-text-area" v-model="form.remark"></textarea>
             </div>
           </div>
         </div>
@@ -140,7 +140,8 @@
           <div class="title">
             <h6>4. {{ $t('view.pickinglist.component') }} <i class="bi bi-gem"></i></h6>
             <button class="btn btn-sm btn-primary btn-add-components">
-              <i class="bi bi-plus"></i>
+              <span class="mr-1"><i class="bi bi-plus-square"></i></span>
+              <span>เพิ่มส่วนประกอบ</span>
             </button>
           </div>
           <div class="data-input-container">
@@ -148,10 +149,10 @@
               <table class="table table-striped">
                 <thead>
                   <tr>
-                    <th>*</th>
+                    <th>รายการ</th>
                     <th>ขนาด</th>
                     <th>จำนวน</th>
-                    <th>*</th>
+                    <th>ลบรายการ</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -254,7 +255,21 @@ export default {
     color: var(--base-font-color);
   }
   input {
-    font-size: 13px;
+    font-size: 10px;
+  }
+  label {
+    font-size: 10px;
+  }
+  table {
+    font-size: 10px;
+    th{
+      padding-left: 5px;
+    }
+    td {
+      padding: 5px;
+      vertical-align: middle;
+      //height: 5px;
+    }
   }
 
   .upload-container {
@@ -263,12 +278,13 @@ export default {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     background-color: #f7f7f7;
     padding: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     //display: grid;
     //justify-content: center;
     .select-preview-container {
       display: flex;
       flex-direction: row;
+      margin-top: 5px;
       .preveiw-container {
         display: flex;
         //justify-content: center;
@@ -331,14 +347,14 @@ export default {
     background-color: #f7f7f7;
     //padding: 20px;
     padding: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     .title {
       display: flex;
       justify-content: space-between;
       margin-bottom: 5px;
       .btn-add-components {
         height: 30px;
-        width: 60px;
+        //width: 60px;
       }
     }
 
@@ -378,8 +394,8 @@ export default {
       }
     }
   }
-  .btn-container{
-    padding-bottom: 70px;
+  .btn-container {
+    padding-bottom: 30px;
   }
 }
 </style>

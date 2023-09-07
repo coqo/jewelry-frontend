@@ -1,4 +1,4 @@
-import settingRoutes from './setting-routes.js'
+//import settingRoutes from './setting-routes.js'
 
 import Layout from '@/layout/web/LayoutDashboard.vue'
 import Dashboard from '@/views/dashboard/WelcomePage.vue'
@@ -96,7 +96,7 @@ const routes = [
     meta: {
       Displayname: {
         en: 'Production Plan',
-        th: 'ผลิตสินค้า'
+        th: 'ใบจ่าย-รับคืน'
       },
       classIcon: 'bi bi-vector-pen',
       majorShow: true,
@@ -110,52 +110,52 @@ const routes = [
         meta: {
           Displayname: {
             en: 'Picking List',
-            th: 'สร้างใบผลิตสินค้า'
+            th: 'สร้างใบจ่าย/รับคืนงาน'
           },
           minorShow: true
         }
       },
+      // {
+      //   path: '/mold',
+      //   name: 'mold',
+      //   component: Dashboard,
+      //   meta: {
+      //     Displayname: {
+      //       en: 'Mold',
+      //       th: 'เเม่พิมพ์ [ออกแบบ/ผลิต]'
+      //     },
+      //     minorShow: true
+      //   }
+      // },
       {
-        path: '/mold',
-        name: 'mold',
+        path: '/pickinglist-tag',
+        name: 'pickinglist-tag',
         component: Dashboard,
         meta: {
           Displayname: {
-            en: 'Mold',
-            th: 'เเม่พิมพ์ [ออกแบบ/ผลิต]'
-          },
-          minorShow: true
-        }
-      },
-      {
-        path: '/production-tag',
-        name: 'production-tag',
-        component: Dashboard,
-        meta: {
-          Displayname: {
-            en: 'Production Tag',
-            th: 'ติดตามการผลิต'
-          },
-          minorShow: true
-        }
-      },
-      {
-        path: '/production-report',
-        name: 'production-report',
-        component: Dashboard,
-        meta: {
-          Displayname: {
-            en: 'Production Report',
-            th: 'รายงานการผลิต'
+            en: 'Pickinglist Tag',
+            th: 'ติดตามงานผลิต'
           },
           minorShow: true
         }
       }
+      // {
+      //   path: '/production-report',
+      //   name: 'production-report',
+      //   component: Dashboard,
+      //   meta: {
+      //     Displayname: {
+      //       en: 'Production Report',
+      //       th: 'รายงานการผลิต'
+      //     },
+      //     minorShow: true
+      //   }
+      // }
     ]
   },
 
   //----- Setting -----
-  ...settingRoutes,
+  //...settingRoutes,
 
   //---- Logout -----
   {
